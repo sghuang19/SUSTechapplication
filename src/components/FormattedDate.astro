@@ -3,7 +3,9 @@ interface Props {
 	date: Date;
 }
 
-const { date } = Astro.props;
+// FIXME: Use a dumb date for now
+// const { date } = Astro.props;
+const date = new Date()
 ---
 
 <time datetime={date.toISOString()}>
