@@ -1,6 +1,14 @@
-# [SG]-17-高旭 PhD @ National University of Singapore
-
-
+---
+title: "[SG]-17-高旭 PhD @ National University of Singapore"
+pubDate: 2021-06-19
+year: 17
+region: sg
+category: grad
+university: nus
+degree: phd
+major: bio
+program: bio
+---
 
 ## 基本背景
 

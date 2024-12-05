@@ -1,4 +1,14 @@
-# [US]17-王超-PhD @ University of Southern California-Neuroscience Graduate Program
+---
+title: "[US]17-王超-PhD @ University of Southern California-Neuroscience Graduate Program"
+pubDate: 2021-05-09
+year: 17
+region: us
+category: grad
+university: usc
+degree: phd
+major: bio
+program: neuro
+---
 
 ### 基本背景
 

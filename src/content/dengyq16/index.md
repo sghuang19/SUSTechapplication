@@ -1,4 +1,15 @@
-# [US]-16-邓雨晴 PhD in ME @ Boston University
+---
+title: "[US]-16-邓雨晴 PhD in ME @ Boston University"
+pubDate: 2020-04-29
+
+year: 16
+region: us
+category: grad
+university: bu
+degree: phd
+major: bio
+program: mech
+---
 
 ### 基本背景
 

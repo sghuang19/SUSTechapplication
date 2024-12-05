@@ -1,4 +1,12 @@
-# [CN]-16-张亚杰-研究助理-北京脑科学与类脑研究中心
+---
+title: "[CN]-16-张亚杰-研究助理-北京脑科学与类脑研究中心"
+pubDate: 2020-04-27
+year: 16
+region: cn
+category: employment
+employer: cibr
+major: bio
+---
 
 ### 基本信息
 

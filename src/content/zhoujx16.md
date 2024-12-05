@@ -1,4 +1,16 @@
-# \[KSA\]-16-周觉晓 PhD in Computer Science @ KAUST
+---
+title: "[KSA]-16-周觉晓 PhD in Computer Science @ KAUST"
+pubDate: 2020-04-15
+year: 16
+region: sa
+category: grad
+university: kaust
+degree: phd
+major: bio
+program: cs
+---
+
+# 
 
 ## 基本背景
 

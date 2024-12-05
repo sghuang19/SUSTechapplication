@@ -1,4 +1,14 @@
-# [US]-16-贺文琦 PhD in BME @ UC Irvine
+---
+title: "[US]-16-贺文琦 PhD in BME @ UC Irvine"
+pubDate: 2020-05-04
+year: 16
+region: us
+category: grad
+university: uci
+degree: phd
+major: bio
+program: bio
+---
 
 ### 基本背景：
 
@@ -96,4 +106,3 @@
 
  
 
- 

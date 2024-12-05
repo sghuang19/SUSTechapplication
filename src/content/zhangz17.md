@@ -1,4 +1,14 @@
-# \[US\]17-张展-UPenn-Bioengineering Ph.D.
+---
+title: "[US]17-张展-UPenn-Bioengineering Ph.D."
+pubDate: 2021-08-15
+year: 17
+region: us
+category: grad
+university: upenn
+degree: phd
+major: bio
+program: bio
+---
 
 ## 基本背景
 

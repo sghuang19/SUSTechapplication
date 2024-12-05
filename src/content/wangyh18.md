@@ -1,4 +1,14 @@
-# \[SG\]-18-王叶晗 Biotechnology MSc @ NUS
+---
+title: "[SG]-18-王叶晗 Biotechnology MSc @ NUS"
+pubDate: "2022-06-10"
+year: 18
+region: sg
+category: grad
+university: nus
+degree: ms
+major: bio
+program: bio
+---
 
 ## 基本背景
 > 姓名：王叶晗

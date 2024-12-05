@@ -1,4 +1,14 @@
-# [US]-16-李如璇 University of Pittsburgh
+---
+title: "[US]-16-李如璇 University of Pittsburgh"
+pubDate: 2020-05-04
+year: 16
+region: us
+category: grad
+university: pitt
+degree: phd
+major: bio
+program: bio
+---
 
 ### 基本信息：
 

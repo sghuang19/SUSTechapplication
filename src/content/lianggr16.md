@@ -1,4 +1,14 @@
-# [US]-16-梁广儒 in BME @ Oregon Health & Science University
+---
+title: "[US]-16-梁广儒 in BME @ Oregon Health & Science University"
+pubDate: 2020-05-04
+year: 16
+region: us
+category: grad
+university: ohsu
+degree: phd
+major: bio
+program: bio
+---
 
 ### 基本背景
 

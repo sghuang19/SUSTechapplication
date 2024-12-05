@@ -7,7 +7,9 @@ the frontmatter is documented here.
 Here's a boilerplate of YAML frontmatter:
 
 ```yaml
-year: 2019
+title: "Tender, Strong, and True"
+pubDate: "2023-03-01"
+year: 19
 region: us
 category: grad
 university: nd

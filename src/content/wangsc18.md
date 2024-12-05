@@ -1,6 +1,14 @@
-# [HK]18-王澍辰 @ HKUST - Bioengineering PhD
-
- 
+---
+title: "[HK]18-王澍辰 @ HKUST - Bioengineering PhD"
+pubDate: "2022-05-10"
+year: 18
+region: hk
+category: grad
+university: hkust
+degree: phd
+major: bio
+program: bio
+---
 
 ### 基本背景
 
