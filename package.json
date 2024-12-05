@@ -1,9 +1,17 @@
 {
-  "name": "sustechapplication",
+  "name": "astro-project",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "serve": "docsify serve docs"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "docsify-cli": "^4.4.4"
+    "@astrojs/mdx": "^4.0.1",
+    "@astrojs/rss": "^4.0.10",
+    "@astrojs/sitemap": "^3.2.1",
+    "astro": "^5.0.3"
   }
 }
