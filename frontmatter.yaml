@@ -1,0 +1,36 @@
+# Lookup table for frontmatter fields
+
+category:
+  - grad: "Graduate school"
+  - abroad: "Study abroad programs"
+  - recruit: "Recruiting information"
+
+region:
+  - au: "Australia & New Zealand"
+  - ca: "Canada"
+  - cn: "China (mainland)"
+  - de: "Germany"
+  - fr: "France"
+  - hk: "Hong Kong SAR, China"
+  - jp: "Japan"
+  - kr: "South Korea"
+  - sa: "Saudi Arabia"
+  - tw: "Taiwan Province, China"
+  - uk: "United Kingdom"
+  - us: "United States of America"
+
+university:
+  - nd: "University of Notre Dame"
+  - sustech: "Southern University of Science and Technology"
+
+degree:
+  - meng: "Master of Engineering"
+  - mphil: "Master of Philosophy"
+  - ms: "Master of Science"
+  - phd: "Doctor of Philosophy"
+
+major:
+  - sme: "Microelectronics"
+
+program:
+  - cse: "Computer Science and Engineering"
