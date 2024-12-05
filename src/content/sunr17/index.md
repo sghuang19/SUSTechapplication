@@ -55,11 +55,11 @@ USNEWS的学科排名是相对可信的选择，**建议将USNEWS学科排名当
 
 
 
-![img1](./images/sunrui_2.jpeg)
+![img1](sunrui_2.jpeg)
 
 
 
-![img1](./images/sunrui_3.jpeg)
+![img1](sunrui_3.jpeg)
 
 
 
@@ -83,7 +83,7 @@ GPA：对于总GPA显著低于专业GPA的同学（比如转专业的同学、�
 
 
 
-![img3](./images/sunrui_4.jpeg)
+![img3](sunrui_4.jpeg)
 
 
 
