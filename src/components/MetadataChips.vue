@@ -1,7 +1,12 @@
 <script setup lang="ts">
   import { defineProps } from "vue";
-  import { ElTag } from "element-plus";
-  import { Edit } from "@element-plus/icons-vue";
+  import {
+    Aim,
+    Calendar,
+    School,
+    Location,
+    Notebook,
+  } from "@element-plus/icons-vue";
   import Chip from "./Chip.vue";
 
   defineProps({
@@ -10,8 +15,12 @@
 </script>
 
 <template>
-  <div class="metadata">
-    <Chip :text="data.university" type="primary" :icon="Edit" />
+  <div>
+    <Chip :text="data.year + ' 级'" type="primary" :icon="Calendar" />
+    <Chip :text="data.region.toUpperCase()" type="primary" :icon="Location" />
+    <Chip :text="data.university" type="primary" :icon="School" />
+    <Chip :text="data.major" type="primary" :icon="Notebook" />
+    <Chip :text="data.program" type="primary" :icon="Aim" />
   </div>
 </template>
 

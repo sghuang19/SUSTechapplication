@@ -1,19 +1,20 @@
-<script setup>
+<script setup lang="ts">
   import { defineProps } from "vue";
-  import { ElTag } from "element-plus";
+  // ElButton has a better support for icons compared to ElTag
+  import { ElButton, ElIcon } from "element-plus";
 
-  defineProps({
-    text: { type: String, required: true },
-    type: { type: String, default: "primary" },
-    icon: { type: Object, default: null },
-  });
+  defineProps<{
+    text: string;
+    type?: "primary" | "success" | "info" | "warning" | "danger";
+    icon?: ElIcon | null;
+  }>();
 </script>
 
 <template>
-  <el-tag :type="type">
+  <el-button :type="type || 'primary'" :icon="icon" :plain="true" class="">
     <component :is="icon" />
-    {{ text }}
-  </el-tag>
+    <span>{{ text }}</span>
+  </el-button>
 </template>
 
 <style scoped></style>
