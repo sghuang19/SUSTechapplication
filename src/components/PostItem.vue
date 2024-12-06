@@ -13,9 +13,9 @@
 <template>
   <a
     :href="`/post/${id}/`"
-    class="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow"
+    class="block p-6 m-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
   >
-    <h2 class="text-xl font-semibold mb-4">{{ data.title }}</h2>
+    <h2 class="text-xl font-semibold">{{ data.title }}</h2>
     <!-- Author and Date -->
     <section>
       <div>[Author]</div>

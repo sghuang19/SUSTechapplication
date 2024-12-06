@@ -15,6 +15,7 @@
 </script>
 
 <template>
+  <!--  TODO: Style the chip group  -->
   <div>
     <Chip :text="data.year + ' 级'" type="primary" :icon="Calendar" />
     <Chip :text="data.region.toUpperCase()" type="primary" :icon="Location" />
