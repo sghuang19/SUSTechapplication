@@ -13,8 +13,8 @@ const {
 } = post.data;
 ---
 
-<a href=`/post/${post.id}/`>
-    <h2 class="">{title}</h2>
+<a href=`/post/${post.id}/` class="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+    <h2 class="text-xl font-semibold mb-4">{title}</h2>
     <!-- Author and Date -->
     <section>
         <div>{"[Author]"}</div>
@@ -24,11 +24,11 @@ const {
     </section>
     <!-- Other metadata -->
     <section>
-        <div>{year}</div>
-        <div>{category}</div>
-        <div>{region}</div>
-        <div>{major}</div>
-        <div>{program}</div>
-        <div>{university}</div>
+        <span>{year}</span>
+        <span>{category}</span>
+        <span>{region}</span>
+        <span>{major}</span>
+        <span>{program}</span>
+        <span>{university}</span>
     </section>
 </a>
