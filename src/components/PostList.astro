@@ -1,0 +1,9 @@
+---
+import PostItem from "./PostItem.astro";
+const { posts } = Astro.props;
+---
+
+<!-- FIXME: Solve type issue -->
+<ul>
+  {posts.map((post) => <PostItem key={post.id} post={post} />)}
+</ul>

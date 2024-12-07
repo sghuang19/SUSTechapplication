@@ -17,22 +17,22 @@ const posts = (await getCollection("post")).sort(
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
     <style></style>
     <title>Latest Posts</title>
-  </head>
-  <body>
-    <Header />
-    <main>
-      <section>
+</head>
+<body>
+<Header/>
+<main>
+    <section>
         <ul>
-          {
-            posts.map((post) => (
-              <li>
-                <PostItem post={post} />
-              </li>
-            ))
-          }
+            {
+                posts.map((post) => (
+                        <li>
+                            <PostItem post={post}/>
+                        </li>
+                ))
+            }
         </ul>
-      </section>
-    </main>
-    <Footer />
-  </body>
+    </section>
+</main>
+<Footer/>
+</body>
 </html>
