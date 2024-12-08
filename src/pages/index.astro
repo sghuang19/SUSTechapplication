@@ -5,11 +5,14 @@ import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION, ALL_POSTS } from "../consts";
 import Filter from "../components/Filter.astro";
 import PostList from "../components/PostList.astro";
-import PostItem from "../components/PostItem.astro";
+
+// must be serialized before passed to client side
+// content stripped for performance
+const metadata = ALL_POSTS.map(({ id, data }) => ({ id, data }));
 ---
 
 <!doctype html>
-<html lang="en" data-posts={posts}>
+<html lang="en" data-metadata={JSON.stringify(metadata)}>
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
@@ -17,7 +20,7 @@ import PostItem from "../components/PostItem.astro";
     <Header />
     <main>
       <Filter />
-      <PostList id="filtered-posts" posts={posts} />
+      <PostList posts={metadata} />
     </main>
     <Footer />
   </body>
@@ -27,15 +30,18 @@ import PostItem from "../components/PostItem.astro";
   import { subscribeToFilters } from "../stores/filters";
   import applyFilters from "../utils/applyFilters";
 
-  const postList = document.getElementById("filtered-posts");
+  // data from frontmatter passed to HTML elem, must be parsed
+  const posts = JSON.parse(document.documentElement.dataset.metadata);
   // apply new filters when filters have changed, and rerender PostList
-  subscribeToFilters((newFilters) => {
-    const filteredPosts = applyFilters(
-      document.documentElement.dataset.posts, // data from frontmatter passed to HTML elem
-      newFilters,
-    );
-    // rerender PostList with updated filteredPosts
-    console.log("rerendering the list with new posts");
-    postList.setAttribute("posts", filteredPosts);
+  const result = subscribeToFilters((newFilters) => {
+    const filteredPostIds = applyFilters(posts, newFilters);
+    const postItems = document.querySelectorAll("#post-list > li");
+    postItems.forEach((item) => {
+      if (filteredPostIds.includes(item.id)) {
+        item.style.display = ""; // Hide the item
+      } else {
+        item.style.display = "none"; // Hide the item
+      }
+    });
   });
 </script>
