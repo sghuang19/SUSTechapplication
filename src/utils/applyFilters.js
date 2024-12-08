@@ -1,10 +1,13 @@
-/** Apply filters on a list of posts */
+/** Apply filters on a list of posts, return array of id */
 export default function applyFilters(posts, filters) {
-  const filteredPosts = posts;
-  console.log(filters);
-  for (const [field, value] of Object.entries(filters)) {
-    console.log(field, value);
-    // only keep those that has post.field.value = true
+  let filteredPosts = posts;
+  for (const [field, options] of Object.entries(filters)) {
+    // keep those with post.data.field in options
+    filteredPosts = filteredPosts.filter((post) => {
+      // Check if metadata is one of the allowed options
+      return options.includes(post.data[field]);
+    });
   }
-  return filteredPosts;
+  // return an array of post.id in filteredPosts
+  return filteredPosts.map(({ id }) => id);
 }
