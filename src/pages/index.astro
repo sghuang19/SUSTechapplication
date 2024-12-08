@@ -4,20 +4,11 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION, METADATA } from "../consts";
 import Filter from "../components/Filter.vue";
-import usePosts from "../utils/usePosts";
+import allPosts from "../utils/allPosts";
 import PostList from "../components/PostList.astro";
+import PostItem from "../components/PostItem.astro";
 
-const posts = await usePosts();
-/** Stores filtered posts that should be rendered */
-let filteredPosts = posts;
-/**
- * Accepts updated filtered posts from <Filter/>, rerender post items
- * accordingly
- * */
-function updateFilteredPosts(newFilteredPosts) {
-  console.log("Accepted newFilteredPosts");
-  filteredPosts = newFilteredPosts;
-}
+const post = allPosts[0];
 ---
 
 <!doctype html>
@@ -28,13 +19,8 @@ function updateFilteredPosts(newFilteredPosts) {
   <body>
     <Header />
     <main>
-      <Filter
-        client:load
-        posts={posts}
-        metadata={METADATA}
-        on:filter-results={updateFilteredPosts}
-      />
-      <PostList posts={filteredPosts} />
+      <PostItem post={post} />
+      <Filter client:load posts={allPosts} metadata={METADATA} />
     </main>
     <Footer />
   </body>

@@ -1,6 +1,6 @@
 import { reactive, computed, watch } from "vue";
 
-/** core logic for filtering posts inside Vue component */
+/** core logic for maintaining filters state */
 export default function useFilters(posts, emit) {
   // Reactive filters object
   // TODO: use abstraction from METADATA
