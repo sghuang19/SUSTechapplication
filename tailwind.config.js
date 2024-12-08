@@ -1,8 +1,10 @@
+import daisyui from "daisyui";
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{astro,vue}", "./public/**/*.html"],
   theme: {
     extend: {},
   },
-  plugins: ["prettier-plugin-tailwindcss"],
+  plugins: ["prettier-plugin-tailwindcss", daisyui],
 };
