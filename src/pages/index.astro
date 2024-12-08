@@ -3,12 +3,10 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION, METADATA } from "../consts";
-import Filter from "../components/Filter.vue";
+import Filter from "../components/Filter.astro";
 import allPosts from "../utils/allPosts";
 import PostList from "../components/PostList.astro";
 import PostItem from "../components/PostItem.astro";
-
-const post = allPosts[0];
 ---
 
 <!doctype html>
@@ -19,9 +17,16 @@ const post = allPosts[0];
   <body>
     <Header />
     <main>
-      <PostItem post={post} />
-      <Filter client:load posts={allPosts} metadata={METADATA} />
+      <Filter posts={allPosts} />
     </main>
     <Footer />
   </body>
 </html>
+
+<script>
+  import { subscribeToFilters } from "../stores/filters";
+  // apply new filters when filters have changed, and rerender PostList
+  subscribeToFilters(() => {
+    console.log("filters changes detected!");
+  });
+</script>

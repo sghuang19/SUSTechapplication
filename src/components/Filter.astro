@@ -49,12 +49,13 @@ const metadata = useMetadata();
         return filterState;
     }
 
+    import {updateFilters} from "../stores/filters";
+
     const form = document.getElementById('filter');
-    const filterState = getFilterState(form); // initialize filter state
+    updateFilters(getFilterState(form)); // initialize filter state
     form.addEventListener('change', () => {
         const formState = getFilterState(form);
-        console.log('Updated formState:', formState);
+        updateFilters(formState);
+        console.log('new filters:', formState);
     });
-
-    // console.log('new filters:', filterState);
 </script>

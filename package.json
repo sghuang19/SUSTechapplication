@@ -10,7 +10,8 @@
     "test": "vitest"
   },
   "dependencies": {
-    "fuse.js": "^7.0.0"
+    "fuse.js": "^7.0.0",
+    "nanostores": "^0.11.3"
   },
   "devDependencies": {
     "@astrojs/tailwind": "^5.1.3",
