@@ -4,20 +4,21 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION, METADATA } from "../consts";
 import Filter from "../components/Filter.astro";
-import allPosts from "../utils/allPosts";
+import posts from "../utils/allPosts";
 import PostList from "../components/PostList.astro";
 import PostItem from "../components/PostItem.astro";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" data-posts={posts}>
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
     <Header />
     <main>
-      <Filter posts={allPosts} />
+      <Filter />
+      <PostList id="filtered-posts" posts={posts} />
     </main>
     <Footer />
   </body>
@@ -25,8 +26,17 @@ import PostItem from "../components/PostItem.astro";
 
 <script>
   import { subscribeToFilters } from "../stores/filters";
+  import applyFilters from "../utils/applyFilters";
+
+  const postList = document.getElementById("filtered-posts");
   // apply new filters when filters have changed, and rerender PostList
-  subscribeToFilters(() => {
-    console.log("filters changes detected!");
+  subscribeToFilters((newFilters) => {
+    const filteredPosts = applyFilters(
+      document.documentElement.dataset.posts, // data from frontmatter passed to HTML elem
+      newFilters,
+    );
+    // rerender PostList with updated filteredPosts
+    console.log("rerendering the list with new posts");
+    postList.setAttribute("posts", filteredPosts);
   });
 </script>
