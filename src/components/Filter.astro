@@ -33,7 +33,16 @@ const metadata = useMetadata();
 </form>
 
 <script>
-    /** Helper function to dump the form data into filters state */
+    /**
+     *  Helper function to dump the form data into filters state.
+     * The data would look like:
+     * ```json
+     * {
+     *   category: ['grad'],
+     *   degree: ['ms', 'phd']
+     * }
+     * ```
+     */
     function getFilterState(form) {
         const formData = new FormData(form);
         const filterState = {};
@@ -41,9 +50,9 @@ const metadata = useMetadata();
         // dynamically generate filters object
         for (const [key, value] of formData.entries()) {
             if (!filterState[key]) {
-                filterState[key] = {};
+                filterState[key] = [];
             }
-            filterState[key][value] = true;
+            filterState[key].push(value);
         }
 
         return filterState;
@@ -56,6 +65,5 @@ const metadata = useMetadata();
     form.addEventListener('change', () => {
         const formState = getFilterState(form);
         updateFilters(formState);
-        console.log('new filters:', formState);
     });
 </script>
