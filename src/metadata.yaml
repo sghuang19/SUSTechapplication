@@ -44,10 +44,33 @@ degree:
   ms: "Master of Science"
   me: "Master of Engineering"
 
-major:
+# Department, shorthand and canonical names
+dept:
+  # College of Science
+  math: "数学"
+  phy: "物理"
   chem: "化学"
-  bio: "生物"
+  ess: "地空"
+  stat: "统计"
+  # College of Engineering
+  mae: "力航"
+  mee: "机能"
+  mse: "材料"
+  eee: "电子"
+  cse: "计算机"
+  ocean: "海洋"
+  bme: "生医工"
+  ese: "环境"
   sme: "微电子"
+  sdim: "智能制造"
+  # School of Life Sciences
+  bio: "生物"
+  # School of Medicine
+  med: "医学"
+  # College of Business
+  fin: "金融"
+  ism: "信管"
+  acc: "会计"
 
 program:
   cse: "Computer Science and Engineering"
