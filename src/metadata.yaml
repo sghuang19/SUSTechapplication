@@ -45,7 +45,7 @@ degree:
   me: "Master of Engineering"
 
 # Department, shorthand and canonical names
-dept:
+department:
   # College of Science
   math: "数学"
   phy: "物理"
