@@ -1,7 +1,8 @@
 .DS_Store
 node_modules/
-.astro/
+.nuxt/
 dist/
+.output/
 
 # local env files
 .env.local
