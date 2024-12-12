@@ -28,3 +28,4 @@ bun.lockb
 
 # Misc
 tags
+*.d.ts
