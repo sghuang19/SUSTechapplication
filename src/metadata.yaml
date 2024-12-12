@@ -40,10 +40,9 @@ employer:
   cibr: "北京脑科学与类脑研究中心"
 
 degree:
-  meng: "Master of Engineering"
-  mphil: "Master of Philosophy"
-  ms: "Master of Science"
   phd: "Doctor of Philosophy"
+  ms: "Master of Science"
+  me: "Master of Engineering"
 
 major:
   chem: "化学"
