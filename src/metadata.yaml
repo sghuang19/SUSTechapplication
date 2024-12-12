@@ -2,10 +2,11 @@
 
 # Category, shorthand and canonical names
 category:
-  abroad: "境外交流/科研项目"
+  grad: "研究生"
   employment: "就业"
-  grad: "研究生项目"
-  recruit: "招生/招聘信息"
+  abroad: "交流"
+  recruit: "招生"
+  exp: "经验"
 
 # Region, shorthand and canonical names
 region:
