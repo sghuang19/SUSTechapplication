@@ -7,22 +7,17 @@ category:
   grad: "研究生项目"
   recruit: "招生/招聘信息"
 
-# Region, and canonical names
-# FIXME: Should EU countries / North America countries be merged?
+# Region, shorthand and canonical names
 region:
-  au: "澳大利亚/新西兰"
-  ca: "加拿大"
   cn: "中国大陆"
-  de: "德国"
-  fr: "法国"
-  hk: "香港特别行政区"
-  jp: "日本"
-  kr: "韩国"
-  sa: "沙特阿拉伯"
+  hmt: "港澳台"
+  na: "北美洲"
+  oc: "大洋洲"
   sg: "新加坡"
-  tw: "台湾省"
+  eu: "欧陆"
+  jk: "日韩"
+  sa: "沙特阿拉伯"
   uk: "英国"
-  us: "美国"
 
 # University, shorthand and canonical names
 university:
