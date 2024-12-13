@@ -7,11 +7,14 @@ import Components from "unplugin-vue-components/vite";
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
+  build: {
+    transpile: ["vueuc"], // for Naive UI
+  },
   modules: ["@nuxt/content", "@nuxtjs/tailwindcss", "nuxtjs-naive-ui"],
   nitro: {
     prerender: {
       // for static site generation
-      routes: ["api/*"],
+      routes: ["/api/stories", "/api/metadata"], // preceding slash needed
     },
   },
   vite: {
