@@ -17,6 +17,10 @@
   <n-tabs type="segment" justify-content="space-around" @update:value="">
     <n-tab-pane v-for="(val, key) in metadata.category" :name="key" :tab="val">
       <n-space vertical>
+        <n-flex>
+          年级范围
+          <n-date-picker type="yearrange" clearable />
+        </n-flex>
         <n-select
           multiple
           clearable
@@ -30,7 +34,19 @@
           filterable
           placeholder="选择区域"
           :options="options.region"
+          :disabled="false"
         />
+        <n-flex>
+          学位类型
+          <n-radio-group name="degree">
+            <n-radio-button
+              multiple
+              v-for="(val, key) in metadata.degree"
+              :value="key"
+              :label="val"
+            />
+          </n-radio-group>
+        </n-flex>
       </n-space>
     </n-tab-pane>
   </n-tabs>
