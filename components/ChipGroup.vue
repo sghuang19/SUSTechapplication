@@ -1,5 +1,13 @@
 <script setup lang="ts">
-  import { GridOutline, Location, Ribbon, School } from "@vicons/ionicons5";
+  import {
+    Book,
+    Business,
+    Calendar,
+    GridOutline,
+    Location,
+    Ribbon,
+    School,
+  } from "@vicons/ionicons5";
 
   const props = defineProps(["story"]); // named story due to queryContent API of Nuxt
 
@@ -8,6 +16,9 @@
     { key: "region", icon: Location, type: "info" },
     { key: "degree", icon: School, type: "success" },
     { key: "program", icon: Ribbon, type: "warning" },
+    { key: "year", icon: Calendar, type: "warning" },
+    { key: "department", icon: Book, type: "warning" },
+    { key: "university", icon: Business, type: "warning" },
   ];
 
   const availableFields = computed(() =>
