@@ -9,6 +9,12 @@ export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
   modules: ["@nuxt/content", "@nuxtjs/tailwindcss", "nuxtjs-naive-ui"],
+  nitro: {
+    // for static site generation
+    prerender: {
+      routes: ["api/stories"],
+    },
+  },
   vite: {
     plugins: [
       AutoImport({
