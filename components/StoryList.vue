@@ -6,7 +6,7 @@
 
 <template>
   <ul class="">
-    <li v-for="story in stories" :key="story._id">
+    <li v-for="story in stories">
       <StoryCard :story="story" />
     </li>
   </ul>
