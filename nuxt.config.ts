@@ -1,6 +1,5 @@
 import { defineNuxtConfig } from "nuxt/config";
 // Auto import for Nuxt components
-import AutoImport from "unplugin-auto-import/vite";
 import { NaiveUiResolver } from "unplugin-vue-components/resolvers";
 import Components from "unplugin-vue-components/vite";
 
@@ -10,25 +9,14 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxt/content", "@nuxtjs/tailwindcss", "nuxtjs-naive-ui"],
   nitro: {
-    // for static site generation
     prerender: {
-      routes: ["api/stories"],
+      // for static site generation
+      routes: ["api/*"],
     },
   },
   vite: {
     plugins: [
-      AutoImport({
-        imports: [
-          {
-            "naive-ui": [
-              "useDialog",
-              "useMessage",
-              "useNotification",
-              "useLoadingBar",
-            ],
-          },
-        ],
-      }),
+      // automatic import for Naive UI components
       Components({
         resolvers: [NaiveUiResolver()],
       }),
