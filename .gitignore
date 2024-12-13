@@ -29,3 +29,6 @@ bun.lockb
 # Misc
 tags
 *.d.ts
+
+# Local Netlify folder
+.netlify/
