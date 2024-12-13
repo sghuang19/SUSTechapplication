@@ -16,14 +16,19 @@
 </script>
 
 <template>
-  <n-button v-for="field in availableFields" :type="field.type">
+  <n-tag
+    round
+    :bordered="false"
+    v-for="field in availableFields"
+    :type="field.type"
+  >
     <template #icon>
       <n-icon>
         <component :is="field.icon" />
       </n-icon>
     </template>
     {{ story[field.key] }}
-  </n-button>
+  </n-tag>
 </template>
 
 <style scoped></style>
