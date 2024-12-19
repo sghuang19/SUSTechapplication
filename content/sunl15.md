@@ -2,7 +2,7 @@
 title: "[US]-15-孙力 PhD in Intelligent Systems @ UPitt"
 pubDate: "2020-02-15"
 year: 15
-region: us
+region: na
 category: grad
 university: pitt
 degree: phd

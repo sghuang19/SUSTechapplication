@@ -2,7 +2,7 @@
 title: "[US]-15-隋昌祥 MS in Biomedical Engineering @ Duke University"
 pubDate: "2020-02-15"
 year: 15
-region: us
+region: na
 category: grad
 university: duke
 degree: ms

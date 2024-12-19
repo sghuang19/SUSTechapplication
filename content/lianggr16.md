@@ -2,7 +2,7 @@
 title: "[US]-16-梁广儒 in BME @ Oregon Health & Science University"
 pubDate: 2020-05-04
 year: 16
-region: us
+region: na
 category: grad
 university: ohsu
 degree: phd
