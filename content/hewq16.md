@@ -2,7 +2,7 @@
 title: "[US]-16-贺文琦 PhD in BME @ UC Irvine"
 pubDate: 2020-05-04
 year: 16
-region: us
+region: na
 category: grad
 university: uci
 degree: phd

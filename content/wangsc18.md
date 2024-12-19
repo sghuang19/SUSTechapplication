@@ -2,7 +2,7 @@
 title: "[HK]18-王澍辰 @ HKUST - Bioengineering PhD"
 pubDate: "2022-05-10"
 year: 18
-region: hk
+region: hmt
 category: grad
 university: hkust
 degree: phd
