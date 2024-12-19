@@ -1,10 +1,11 @@
 <script setup lang="ts">
-  defineProps(["metadata", "options"]);
+  defineProps(["metadata", "options", "filter"]);
 </script>
 
 <template>
   <n-space vertical>
     <n-select
+      v-model:value="filter.region"
       multiple
       clearable
       filterable
@@ -13,6 +14,7 @@
       :disabled="false"
     />
     <n-select
+      v-model:value="filter.program"
       multiple
       clearable
       filterable

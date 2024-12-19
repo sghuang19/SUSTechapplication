@@ -16,12 +16,21 @@
       ]),
     ),
   );
-  const filter = ref({}); // empty filter by default
+
+  // filters for each tab handled separately
+  const filters = reactive({
+    grad: {},
+    employment: {},
+    recruit: {},
+    abroad: {},
+    exp: {},
+  });
 
   // handle tab change
   const currentTab = ref("grad"); // grad is the default tab
   const handleTabChange = (tab) => {
     currentTab.value = tab;
+    console.log("filter in the tab", filters[tab]);
   };
 </script>
 
@@ -33,19 +42,39 @@
     @update:value="handleTabChange"
   >
     <n-tab-pane name="grad" tab="研究生">
-      <GradFilter :options="options" :metadata="metadata" />
+      <GradFilter
+        :options="options"
+        :metadata="metadata"
+        :filter="filters.grad"
+      />
     </n-tab-pane>
     <n-tab-pane name="employment" tab="就业">
-      <EmploymentFilter :options="options" :metadata="metadata" />
+      <EmploymentFilter
+        :options="options"
+        :metadata="metadata"
+        :filter="filters.employment"
+      />
     </n-tab-pane>
     <n-tab-pane name="recruit" tab="招生">
-      <RecruitFilter :options="options" :metadata="metadata" />
+      <RecruitFilter
+        :options="options"
+        :metadata="metadata"
+        :filter="filters.recruit"
+      />
     </n-tab-pane>
     <n-tab-pane name="abroad" tab="交流">
-      <AbroadFilter :options="options" :metadata="metadata" />
+      <AbroadFilter
+        :options="options"
+        :metadata="metadata"
+        :filter="filters.abroad"
+      />
     </n-tab-pane>
     <n-tab-pane name="exp" tab="经验">
-      <ExpFilter :options="options" :metadata="metadata" />
+      <ExpFilter
+        :options="options"
+        :metadata="metadata"
+        :filter="filters.exp"
+      />
     </n-tab-pane>
   </n-tabs>
 </template>

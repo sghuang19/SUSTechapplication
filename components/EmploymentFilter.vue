@@ -1,14 +1,19 @@
 <script setup lang="ts">
-  defineProps(["metadata", "options"]);
+  defineProps(["metadata", "options", "filter"]);
 </script>
 
 <template>
   <n-space vertical>
     <n-flex>
       年级范围
-      <n-date-picker type="yearrange" clearable />
+      <n-date-picker
+        v-model:value="filter.yearRange"
+        type="yearrange"
+        clearable
+      />
     </n-flex>
     <n-select
+      v-model:value="filter.region"
       multiple
       clearable
       filterable
@@ -23,6 +28,7 @@
     <!--      :options="options.employer"-->
     <!--    />-->
     <n-select
+      v-model:value="filter.department"
       multiple
       clearable
       filterable

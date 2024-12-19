@@ -1,14 +1,20 @@
 <script setup lang="ts">
-  defineProps(["metadata", "options"]);
+  defineProps(["metadata", "options", "filter"]);
 </script>
 
 <template>
   <n-space vertical>
+    <!--  TODO: There should be a better way to handle year range  -->
     <n-flex>
       年级范围
-      <n-date-picker type="yearrange" clearable />
+      <n-date-picker
+        v-model:value="filter.yearRange"
+        type="yearrange"
+        clearable
+      />
     </n-flex>
     <n-select
+      v-model:value="filter.university"
       multiple
       clearable
       filterable
@@ -16,6 +22,7 @@
       :options="options.university"
     />
     <n-select
+      v-model:value="filter.region"
       multiple
       clearable
       filterable
@@ -25,7 +32,7 @@
     />
     <n-flex>
       学位类型
-      <n-radio-group name="degree">
+      <n-radio-group v-model:value="filter.degree" name="degree">
         <n-radio-button
           multiple
           v-for="(val, key) in metadata.degree"
@@ -35,6 +42,7 @@
       </n-radio-group>
     </n-flex>
     <n-select
+      v-model:value="filter.department"
       multiple
       clearable
       filterable
@@ -42,6 +50,7 @@
       :options="options.department"
     />
     <n-select
+      v-model:value="filter.program"
       multiple
       clearable
       filterable
