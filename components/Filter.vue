@@ -27,20 +27,11 @@
   });
 
   // handle tab change
-  const currentTab = ref("grad"); // grad is the default tab
-  const handleTabChange = (tab) => {
-    currentTab.value = tab;
-    console.log("filter in the tab", filters[tab]);
-  };
+  const tab = ref("grad"); // grad is the default tab
 </script>
 
 <template>
-  <n-tabs
-    type="segment"
-    justify-content="space-around"
-    :value="currentTab"
-    @update:value="handleTabChange"
-  >
+  <n-tabs v-model:value="tab" type="segment" justify-content="space-around">
     <n-tab-pane name="grad" tab="研究生">
       <GradFilter
         :options="options"
