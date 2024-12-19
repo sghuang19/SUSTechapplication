@@ -13,8 +13,7 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       // for static site generation
-      // FIXME: disable pre-rendering API endpoints for now
-      // routes: ["/api/stories", "/api/metadata"], // preceding slash needed
+      routes: ["/api/stories", "/api/metadata"], // preceding slash needed
     },
   },
   vite: {
