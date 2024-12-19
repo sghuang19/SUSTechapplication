@@ -5,7 +5,6 @@ import Components from "unplugin-vue-components/vite";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
   build: {
     transpile: ["vueuc"], // for Naive UI
@@ -14,7 +13,8 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       // for static site generation
-      routes: ["/api/stories", "/api/metadata"], // preceding slash needed
+      // FIXME: disable pre-rendering API endpoints for now
+      // routes: ["/api/stories", "/api/metadata"], // preceding slash needed
     },
   },
   vite: {
