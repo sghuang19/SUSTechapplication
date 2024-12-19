@@ -17,10 +17,21 @@
     ),
   );
   const filter = ref({}); // empty filter by default
+
+  // handle tab change
+  const currentTab = ref("grad"); // grad is the default tab
+  const handleTabChange = (tab) => {
+    currentTab.value = tab;
+  };
 </script>
 
 <template>
-  <n-tabs type="segment" justify-content="space-around" @update:value="">
+  <n-tabs
+    type="segment"
+    justify-content="space-around"
+    :value="currentTab"
+    @update:value="handleTabChange"
+  >
     <n-tab-pane name="grad" tab="研究生">
       <GradFilter :options="options" :metadata="metadata" />
     </n-tab-pane>
