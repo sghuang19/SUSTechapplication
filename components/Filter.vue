@@ -4,7 +4,7 @@
   import RecruitFilter from "~/components/RecruitFilter.vue";
   import AbroadFilter from "~/components/AbroadFilter.vue";
   import ExpFilter from "~/components/ExpFilter.vue";
-
+  import { useFilters } from "~/composables/useFilters.js";
   const { data: metadata } = await useFetch("/api/metadata");
 
   // extract the choices
@@ -17,17 +17,7 @@
     ),
   );
 
-  // filters for each tab handled separately
-  const filters = reactive({
-    grad: {},
-    employment: {},
-    recruit: {},
-    abroad: {},
-    exp: {},
-  });
-
-  // handle tab change
-  const tab = ref("grad"); // grad is the default tab
+  const { tab, filters } = useFilters();
 </script>
 
 <template>
